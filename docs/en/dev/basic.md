@@ -85,4 +85,3 @@ VitePress supports HMR in dev mode. Changes are reflected instantly.
 ## See Also
 
 - [Architecture](/en/dev/arch)
-- [Contributing](/en/guide/contributing)

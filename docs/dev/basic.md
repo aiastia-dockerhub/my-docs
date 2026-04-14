@@ -89,4 +89,3 @@ src/
 ## 相关链接
 
 - [架构介绍](/dev/arch)
-- [贡献指南](/guide/contributing)
