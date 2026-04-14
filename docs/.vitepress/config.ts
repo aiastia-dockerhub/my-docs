@@ -5,7 +5,7 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'MyTGBot Docs',
   // 如果部署到 GitHub Pages，请修改 base 为你的仓库名，如 '/docs/'
-  base: '/docs/',
+  base: '/my-docs/',
   description: 'Telegram Bot 部署文档',
 
   // 功能开关
@@ -18,12 +18,7 @@ export default defineConfig({
       label: '简体中文',
       lang: 'zh-CN',
       link: '/',
-    },
-    en: {
-      label: 'English',
-      lang: 'en-US',
-      link: '/en/',
-    },
+    }
   },
 
   // HTML 头部配置
@@ -41,8 +36,6 @@ export default defineConfig({
     sidebar: {
       '/guide/': sidebarGuide(),
       '/dev/': sidebarDev(),
-      '/en/guide/': sidebarGuideEn(),
-      '/en/dev/': sidebarDevEn(),
     },
 
     editLink: {
@@ -85,22 +78,6 @@ export default defineConfig({
                 footer: {
                   selectText: '选择',
                   navigateText: '切换',
-                },
-              },
-            },
-          },
-          en: {
-            translations: {
-              button: {
-                buttonText: 'Search',
-                buttonAriaLabel: 'Search',
-              },
-              modal: {
-                noResultsText: 'No results found',
-                resetButtonTitle: 'Reset search',
-                footer: {
-                  selectText: 'Select',
-                  navigateText: 'Navigate',
                 },
               },
             },
@@ -172,40 +149,3 @@ function sidebarDev() {
   ]
 }
 
-/* ========================================
- * 侧边栏 - 英文
- * ======================================== */
-function sidebarGuideEn() {
-  return [
-    {
-      text: 'Bot Deployment',
-      collapsed: false,
-      items: [
-        { text: '115 Magnet Bot', link: '/en/guide/bot-115' },
-        { text: 'Message Extract Bot', link: '/en/guide/bot-code' },
-        { text: 'Bot Commander', link: '/en/guide/bot-commander' },
-        { text: 'FileID Manager Bot', link: '/en/guide/bot-fileid' },
-        { text: 'JavBus Search Bot', link: '/en/guide/bot-javbus' },
-        { text: 'Media Monitor Bot (MPT)', link: '/en/guide/bot-mpt' },
-        { text: 'Sticker to Image Bot', link: '/en/guide/bot-sticker2img' },
-        { text: 'Navigation Links Bot (Top)', link: '/en/guide/bot-top' },
-        { text: 'Gost Tunnel Manager Bot', link: '/en/guide/bot-tunnel' },
-        { text: 'TXT File Share Bot', link: '/en/guide/bot-txttg' },
-        { text: 'Video Queue Bot (VQueue)', link: '/en/guide/bot-vqueue' },
-        { text: 'Video Sender Bot (VSender)', link: '/en/guide/bot-vsender' },
-      ],
-    },
-  ]
-}
-
-function sidebarDevEn() {
-  return [
-    {
-      text: 'Development',
-      items: [
-        { text: 'Quick Start', link: '/en/dev/basic' },
-        { text: 'Architecture', link: '/en/dev/arch' },
-      ],
-    },
-  ]
-}

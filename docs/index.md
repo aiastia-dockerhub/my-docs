@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 🚀 快速开始
-      link: /guide/getting-started
+      link: /guide/bot-115
     - theme: brand
       text: 📖 开发指南
       link: /dev/basic
