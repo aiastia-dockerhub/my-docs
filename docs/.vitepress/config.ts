@@ -3,10 +3,10 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   // 基本信息
   lang: 'zh-CN',
-  title: 'My Docs',
-  // 如果部署到 GitHub Pages，请修改 base 为你的仓库名，如 '/my-docs/'
-  base: '/my-docs/',
-  description: '基于 VitePress 的文档模板',
+  title: 'MyTGBot Docs',
+  // 如果部署到 GitHub Pages，请修改 base 为你的仓库名，如 '/docs/'
+  base: '/docs/',
+  description: 'Telegram Bot 部署文档',
 
   // 功能开关
   lastUpdated: true,
@@ -35,7 +35,7 @@ export default defineConfig({
   // 主题配置
   themeConfig: {
     nav: navBar(),
-    siteTitle: 'My Docs',
+    siteTitle: 'MyTGBot Docs',
     logo: '/logo.svg',
 
     sidebar: {
@@ -46,12 +46,12 @@ export default defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/aiastia123/my-docs/edit/main/docs/:path',
+      pattern: 'https://github.com/aiastia-dockerhub/docs/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页',
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/aiastia123/my-docs' },
+      { icon: 'github', link: 'https://github.com/aiastia-dockerhub/docs' },
     ],
 
     footer: {
@@ -116,18 +116,18 @@ export default defineConfig({
  * ======================================== */
 function navBar() {
   return [
-    { text: '使用指南', link: '/guide/getting-started', activeMatch: '/guide/' },
+    { text: 'Bot 部署指南', link: '/guide/bot-115', activeMatch: '/guide/' },
     { text: '开发文档', link: '/dev/basic', activeMatch: '/dev/' },
     {
       text: '更多',
       items: [
         {
-          text: '更新日志',
-          link: 'https://github.com/aiastia123/my-docs/releases',
+          text: 'GitHub',
+          link: 'https://github.com/aiastia-dockerhub/mytgbot',
         },
         {
-          text: '贡献指南',
-          link: '/guide/contributing',
+          text: '更新日志',
+          link: 'https://github.com/aiastia-dockerhub/docs/releases',
         },
       ],
     },
@@ -140,21 +140,21 @@ function navBar() {
 function sidebarGuide() {
   return [
     {
-      text: '快速开始',
+      text: 'Bot 部署文档',
       collapsed: false,
       items: [
-        { text: '入门指南', link: '/guide/getting-started' },
-        { text: '配置说明', link: '/guide/configuration' },
-        { text: '部署上线', link: '/guide/deployment' },
-      ],
-    },
-    {
-      text: '进阶使用',
-      collapsed: false,
-      items: [
-        { text: 'Markdown 扩展', link: '/guide/markdown' },
-        { text: '自定义主题', link: '/guide/custom-theme' },
-        { text: '贡献指南', link: '/guide/contributing' },
+        { text: '115 磁力推送 Bot', link: '/guide/bot-115' },
+        { text: '消息内容提取 Bot', link: '/guide/bot-code' },
+        { text: 'Bot 指挥官 (Commander)', link: '/guide/bot-commander' },
+        { text: 'FileID 管理 Bot', link: '/guide/bot-fileid' },
+        { text: 'JavBus 搜索 Bot', link: '/guide/bot-javbus' },
+        { text: '媒体监控 Bot (MPT)', link: '/guide/bot-mpt' },
+        { text: '贴纸转图片 Bot', link: '/guide/bot-sticker2img' },
+        { text: '导航链接 Bot (Top)', link: '/guide/bot-top' },
+        { text: 'Gost 隧道管理 Bot', link: '/guide/bot-tunnel' },
+        { text: 'TXT 文件分享 Bot', link: '/guide/bot-txttg' },
+        { text: '视频队列分发 Bot (VQueue)', link: '/guide/bot-vqueue' },
+        { text: '视频分发 Bot (VSender)', link: '/guide/bot-vsender' },
       ],
     },
   ]
@@ -178,21 +178,21 @@ function sidebarDev() {
 function sidebarGuideEn() {
   return [
     {
-      text: 'Getting Started',
+      text: 'Bot Deployment',
       collapsed: false,
       items: [
-        { text: 'Getting Started', link: '/en/guide/getting-started' },
-        { text: 'Configuration', link: '/en/guide/configuration' },
-        { text: 'Deployment', link: '/en/guide/deployment' },
-      ],
-    },
-    {
-      text: 'Advanced',
-      collapsed: false,
-      items: [
-        { text: 'Markdown Extensions', link: '/en/guide/markdown' },
-        { text: 'Custom Theme', link: '/en/guide/custom-theme' },
-        { text: 'Contributing', link: '/en/guide/contributing' },
+        { text: '115 Magnet Bot', link: '/en/guide/bot-115' },
+        { text: 'Message Extract Bot', link: '/en/guide/bot-code' },
+        { text: 'Bot Commander', link: '/en/guide/bot-commander' },
+        { text: 'FileID Manager Bot', link: '/en/guide/bot-fileid' },
+        { text: 'JavBus Search Bot', link: '/en/guide/bot-javbus' },
+        { text: 'Media Monitor Bot (MPT)', link: '/en/guide/bot-mpt' },
+        { text: 'Sticker to Image Bot', link: '/en/guide/bot-sticker2img' },
+        { text: 'Navigation Links Bot (Top)', link: '/en/guide/bot-top' },
+        { text: 'Gost Tunnel Manager Bot', link: '/en/guide/bot-tunnel' },
+        { text: 'TXT File Share Bot', link: '/en/guide/bot-txttg' },
+        { text: 'Video Queue Bot (VQueue)', link: '/en/guide/bot-vqueue' },
+        { text: 'Video Sender Bot (VSender)', link: '/en/guide/bot-vsender' },
       ],
     },
   ]
